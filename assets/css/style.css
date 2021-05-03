@@ -50,7 +50,7 @@ footer {
 }
 
 footer h2 {
-  display: inline-block;
+  display: inline;
   color: #024e76;
   font-size: 30px;
   margin: 0;
@@ -78,23 +78,6 @@ section {
   background-position: center;
   position: relative;
 }
-
-/* homepage hero */
-.hero {
-  margin: 20px;
-  background-color: white;
-  font-size: 20px;
-  color: blue;
-}
-
-/* secondary page hero */
-.hero-secondary {
-  margin: 20px;
-  background-color: black;
-  font-size: 20px;
-  color: red;
-}
-
 /* Hero Style End */
 
 .hero-form {
@@ -185,7 +168,7 @@ section {
   margin-bottom: 35px;
   padding: 0 100px 20px 100px;
   display: inline-block;
-  border-bottom: 4px solid;
+  border-bottom: 3px solid;
 }
 
 .primary-border {
