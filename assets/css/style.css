@@ -18,6 +18,15 @@ header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
+
 }
 
 header h1 {
@@ -90,15 +99,18 @@ section {
   background-image: url('../images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  background-position: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: flex-start ;
+  align-items: flex-start;
+  
 }
 
-.hero-cta, .hero-form {
-  width: 100%;
-  text-align: center;
+.hero-cta {
+  width: 35%;
+  text-align: right;
   margin: 3.5%;
   color: #fff;
   font-size: 18px;
@@ -118,6 +130,8 @@ section {
   color: #024e76;
   width: 40%;
   margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -136,6 +150,13 @@ section {
   color: #024e76;
   width: 100%;
   margin-bottom: 15px; 
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 1);
+}
+
+.form-input:focus {
+  background-color: rgba(255,255,255, 1);
+  outline: none;
 }
 
 .hero-form label {
@@ -148,6 +169,7 @@ section {
   border: none;
   padding: 10px 20px;
   font-size: 16px;
+  border-radius: 10px;
 } 
 /* HERO STYLES END */
 
@@ -160,7 +182,7 @@ section {
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto 35px auto;
-  width: 80%;
+  width: 50%;
 }
 
 .primary-border {
@@ -194,11 +216,14 @@ section {
   margin: 50px auto;
   padding-bottom: 50px;
   width: 80%;
-  border-bottom: 1px solid #39a6b2;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.step:last-child {
+  border-bottom: 1px solid #39a6b2:
 }
 
 .step h3 {
@@ -251,7 +276,7 @@ section {
 
 .trainer {
   margin: 20px;
-  flex: 0 70%;
+  flex: 1;
   background: #024e76;
   color: #fce138;
 }
@@ -302,7 +327,6 @@ section {
 
 .contact-info iframe {
   height: 400px;
-  flex: 1 100%;
 }
 
 .contact-info div {
@@ -319,9 +343,10 @@ section {
   line-height: 1.5;
   font-size: 16px;
   font-style: normal;
+  
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input:focus, .contact-form textarea:focus {
   border: 1px solid #024e76;
   display: block;
   padding: 7px 15px;
@@ -330,16 +355,19 @@ section {
   width: 100%;
   margin-bottom: 15px;
   margin-top: 5px;
+  border-radius: 10px;
+  background: transparent;
 }
 
-.contact-form button {
+.contact-form button:hover {
   width: 100%;
   border: none;
-  background: #fce138;
-  color: #024e76;
+  background: #39a6b2;
+  color: #fce138;
   text-align: center;
   padding: 15px 0;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 .contact-info a {
@@ -367,11 +395,13 @@ section {
   header {
     padding-bottom: 0;
     justify-content: center;
+    position: relative;
   }
 
   header h1 {
     width: 100%;
     text-align: center;
+    text-shadow:0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   header nav ul {
@@ -380,13 +410,44 @@ section {
     justify-content: center;
   }
 
-  header nav ul li a {
+  header nav ul li a:hover {
     font-size: 20px;
+    text-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+
   }
 
   footer h2, footer div {
     text-align: center;
     width: 100%;
+  }
+
+  .hero-cta, .hero-form {
+    width: 100%;
+  }
+  
+  .hero-cta {
+    text-align: center;
+  }
+
+  .hero-cta h2 {
+  text-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  .section-title {
+    width: 80%;
+  }
+  
+  .trainer {
+    flex: 0 70%;
+  }
+  
+  .contact-info iframe{
+    flex: 1 100%;
   }
 }
 
@@ -395,36 +456,35 @@ section {
   section {
     padding: 30px 15px;
   }
-    .step h3 {
-      flex: 1 100%;
-      text-align: center;
-    }
-  
-    .step-info {
-      flex: 2 100%;
-      text-align: center;
-      justify-content: center;
-    }
-  
-    .step-img {
-      flex: 0 32%;
-      margin-right: 0;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-  
-    .step-text {
-      flex: 100%;
-  
+
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
   }
 
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .step-text {
+    flex: 100%;  
+  }
 }
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
-  
-  .hero-form button {
+  .hero-form button:hover {
     width: 100%;
+    background-color: #39a6b2;
   }
 
   .section-title {
@@ -445,11 +505,9 @@ section {
 
   .contact-info > * {
     flex: 0 100%;
-  
   }
 
   .contact-form {
     order: 3;
-  
   }
 }
