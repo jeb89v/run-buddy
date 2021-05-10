@@ -222,8 +222,8 @@ section {
   justify-content: space-between;
 }
 
-.step:last-child {
-  border-bottom: 1px solid #39a6b2:
+.step:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
 }
 
 .step h3 {
